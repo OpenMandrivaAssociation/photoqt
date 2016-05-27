@@ -5,7 +5,7 @@ Summary:	Image viewer
 License:	GPLv3
 Group:		Graphics
 URL:		http://photoqt.org/
-Source0:	http://photoqt.org/pkgs/%{oname}-%{version}.tar.gz
+Source0:	http://photoqt.org/pkgs/%{name}-%{version}.tar.gz
 # https://gitlab.com/luspi/photoqt
 Source1:	photoqt.appdata.xml
 Source2:	CMakeLists.txt
@@ -36,7 +36,7 @@ being good looking and highly configurable.
 #---------------------------------------------------
 
 %prep
-%setup -qn %{oname}-%{version}
+%setup -q
 cp -p %{SOURCE1} .
 cp -p %{SOURCE2} .
 sed -i 's|Debug|Release|' CMakeLists.txt
