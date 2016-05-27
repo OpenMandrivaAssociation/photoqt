@@ -31,8 +31,8 @@ being good looking and highly configurable.
 %doc CHANGELOG README
 %{_bindir}/%{name}
 %{_datadir}/applications/%{name}.desktop
-%{_iconsdir}/hicolor/*/apps/%{oname}.png
-%{_datadir}/appdata/%{oname}.appdata.xml
+%{_iconsdir}/hicolor/*/apps/%{name}.png
+%{_datadir}/appdata/%{name}.appdata.xml
 #---------------------------------------------------
 
 %prep
