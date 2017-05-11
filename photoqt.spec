@@ -1,14 +1,11 @@
 Name:		photoqt
-Version:	1.4
+Version:	1.5.1
 Release:	1
 Summary:	Image viewer
 License:	GPLv3
 Group:		Graphics
 URL:		http://photoqt.org/
 Source0:	http://photoqt.org/pkgs/%{name}-%{version}.tar.gz
-# https://gitlab.com/luspi/photoqt
-Source1:	photoqt.appdata.xml
-Source2:	CMakeLists.txt
 BuildRequires:	desktop-file-utils
 BuildRequires:	qt5-devel
 BuildRequires:	pkgconfig(Qt5Quick)
@@ -37,8 +34,6 @@ being good looking and highly configurable.
 
 %prep
 %setup -q
-cp -p %{SOURCE1} .
-cp -p %{SOURCE2} .
 sed -i 's|Debug|Release|' CMakeLists.txt
 
 %build
