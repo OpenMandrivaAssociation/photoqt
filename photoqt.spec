@@ -1,5 +1,5 @@
 Name:		photoqt
-Version:	1.5.1
+Version:	1.7.1
 Release:	1
 Summary:	Image viewer
 License:	GPLv3
@@ -33,15 +33,15 @@ being good looking and highly configurable.
 #---------------------------------------------------
 
 %prep
-%setup -q
+%autosetup -p1
 sed -i 's|Debug|Release|' CMakeLists.txt
 
 %build
 %cmake_qt5
-%make
+%make_build
 
 %install
-%makeinstall_std -C build
+%make_install
 #
 mkdir -p %{buildroot}%{_datadir}/%{name}/lang
 cp -r build/*.qm %{buildroot}%{_datadir}/%{name}/lang/
