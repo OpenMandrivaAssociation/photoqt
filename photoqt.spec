@@ -19,6 +19,7 @@ BuildRequires:	pkgconfig(libraw)
 BuildRequires:	cmake(ECM)
 BuildRequires:	pkgconfig(poppler-qt5)
 BuildRequires:	pkgconfig(IL)
+BuildRequires:	pkgconfig(libarchive)
 BuildRequires:	freeimage-devel
 BuildRequires:	qt5-linguist-tools
 BuildRequires:	desktop-file-utils
