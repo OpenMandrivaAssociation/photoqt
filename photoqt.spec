@@ -10,7 +10,7 @@ BuildRequires:	desktop-file-utils
 BuildRequires:	qmake5
 BuildRequires:	pkgconfig(Qt5Quick)
 BuildRequires:	pkgconfig(Qt5Svg)
-BuildRequires:	pkgconfig(Qt5ore)
+BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(Qt5Sql)
 BuildRequires:	pkgconfig(Qt5Xml)
 BuildRequires:	pkgconfig(GraphicsMagick)
