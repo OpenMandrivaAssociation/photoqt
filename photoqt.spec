@@ -21,9 +21,12 @@ BuildRequires:	pkgconfig(poppler-qt5)
 BuildRequires:	pkgconfig(IL)
 BuildRequires:	pkgconfig(libarchive)
 BuildRequires:	freeimage-devel
+BuildRequires:  freeimage3
 BuildRequires:	qt5-linguist-tools
 BuildRequires:	desktop-file-utils
 BuildRequires:  pkgconfig(phonon4qt5)
+
+
 Requires:	qt5-database-plugin-sqlite
 Requires:	graphicsmagick
 
