@@ -20,8 +20,8 @@ BuildRequires:	cmake(ECM)
 BuildRequires:	pkgconfig(poppler-qt5)
 BuildRequires:	pkgconfig(IL)
 BuildRequires:	pkgconfig(libarchive)
-BuildRequires:	freeimage-devel
-BuildRequires:  freeimage3
+#BuildRequires:	freeimage-devel
+#BuildRequires:  freeimage3
 BuildRequires:	qt5-linguist-tools
 BuildRequires:	desktop-file-utils
 BuildRequires:  pkgconfig(phonon4qt5)
@@ -47,7 +47,7 @@ being good looking and highly configurable.
 sed -i 's|Debug|Release|' CMakeLists.txt
 
 %build
-%cmake_qt5
+%cmake_qt5 -DFREEIMAGE=OFF
 %make_build
 
 %install
