@@ -6,6 +6,7 @@ License:	GPLv3
 Group:		Graphics
 URL:		http://photoqt.org/
 Source0:	http://photoqt.org/pkgs/%{name}-%{version}.tar.gz
+Patch0:	https://src.fedoraproject.org/rpms/photoqt/raw/master/f/photoqt-exiv2.patch
 BuildRequires:	desktop-file-utils
 BuildRequires:	qmake5
 BuildRequires:	pkgconfig(Qt5Quick)
@@ -25,7 +26,6 @@ BuildRequires:	pkgconfig(libarchive)
 BuildRequires:	qt5-linguist-tools
 BuildRequires:	desktop-file-utils
 BuildRequires:  pkgconfig(phonon4qt5)
-
 
 Requires:	qt5-database-plugin-sqlite
 Requires:	graphicsmagick
