@@ -51,8 +51,8 @@ sed -i 's|Debug|Release|' CMakeLists.txt
 %make_build
 
 %install
-%make_install
-#
+%make_install -C build
+
 mkdir -p %{buildroot}%{_datadir}/%{name}/lang
 cp -r build/*.qm %{buildroot}%{_datadir}/%{name}/lang/
 
