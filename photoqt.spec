@@ -9,6 +9,7 @@ Source0:	http://photoqt.org/pkgs/%{name}-%{version}.tar.gz
 
 BuildRequires:	desktop-file-utils
 BuildRequires:	qmake5
+BuildRequires:	cmake(ECM)
 BuildRequires:  pkgconfig(Qt5Concurrent)
 BuildRequires:  pkgconfig(Qt5DBus)
 BuildRequires:	pkgconfig(Qt5Quick)
@@ -21,8 +22,8 @@ BuildRequires:	pkgconfig(Qt5Xml)
 BuildRequires:	pkgconfig(GraphicsMagick)
 BuildRequires:	pkgconfig(exiv2)
 BuildRequires:	pkgconfig(libraw)
-BuildRequires:	cmake(ECM)
 BuildRequires:	pkgconfig(poppler-qt5)
+BuildRequires:  pkgconfig(pugixml)
 BuildRequires:	pkgconfig(IL)
 BuildRequires:	pkgconfig(libarchive)
 #BuildRequires:	freeimage-devel
