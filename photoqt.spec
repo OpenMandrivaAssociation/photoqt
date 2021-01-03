@@ -1,24 +1,29 @@
 Name:		photoqt
-Version:	1.7.1
-Release:	2
+Version:	2.0
+Release:	1
 Summary:	Image viewer
 License:	GPLv3
 Group:		Graphics
 URL:		http://photoqt.org/
 Source0:	http://photoqt.org/pkgs/%{name}-%{version}.tar.gz
-Patch0:	https://src.fedoraproject.org/rpms/photoqt/raw/master/f/photoqt-exiv2.patch
+
 BuildRequires:	desktop-file-utils
 BuildRequires:	qmake5
+BuildRequires:	cmake(ECM)
+BuildRequires:  pkgconfig(Qt5Concurrent)
+BuildRequires:  pkgconfig(Qt5DBus)
 BuildRequires:	pkgconfig(Qt5Quick)
+BuildRequires:  pkgconfig(Qt5QuickControls2)
 BuildRequires:	pkgconfig(Qt5Svg)
 BuildRequires:	pkgconfig(Qt5Core)
+BuildRequires:  pkgconfig(Qt5Multimedia)
 BuildRequires:	pkgconfig(Qt5Sql)
 BuildRequires:	pkgconfig(Qt5Xml)
 BuildRequires:	pkgconfig(GraphicsMagick)
 BuildRequires:	pkgconfig(exiv2)
 BuildRequires:	pkgconfig(libraw)
-BuildRequires:	cmake(ECM)
 BuildRequires:	pkgconfig(poppler-qt5)
+BuildRequires:  pkgconfig(pugixml)
 BuildRequires:	pkgconfig(IL)
 BuildRequires:	pkgconfig(libarchive)
 #BuildRequires:	freeimage-devel
@@ -26,6 +31,7 @@ BuildRequires:	pkgconfig(libarchive)
 BuildRequires:	qt5-linguist-tools
 BuildRequires:	desktop-file-utils
 BuildRequires:  pkgconfig(phonon4qt5)
+BuildRequires:  qt5-qtimageformats-devel
 
 Requires:	qt5-database-plugin-sqlite
 Requires:	graphicsmagick
