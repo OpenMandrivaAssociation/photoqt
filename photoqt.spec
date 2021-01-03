@@ -9,6 +9,7 @@ Source0:	http://photoqt.org/pkgs/%{name}-%{version}.tar.gz
 
 BuildRequires:	desktop-file-utils
 BuildRequires:	qmake5
+BuildRequires:  pkgconfig(Qt5Concurrent)
 BuildRequires:  pkgconfig(Qt5DBus)
 BuildRequires:	pkgconfig(Qt5Quick)
 BuildRequires:  pkgconfig(Qt5QuickControls2)
