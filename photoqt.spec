@@ -1,6 +1,6 @@
 Name:		photoqt
-Version:	2.0
-Release:	2
+Version:	2.5
+Release:	1
 Summary:	Image viewer
 License:	GPLv3
 Group:		Graphics
@@ -26,6 +26,8 @@ BuildRequires:	pkgconfig(poppler-qt5)
 BuildRequires:  pkgconfig(pugixml)
 BuildRequires:	pkgconfig(IL)
 BuildRequires:	pkgconfig(libarchive)
+BuildRequires:  pkgconfig(python)
+BuildRequires:  python3dist(pip)
 #BuildRequires:	freeimage-devel
 #BuildRequires:  freeimage3
 BuildRequires:	qt5-linguist-tools
@@ -43,9 +45,10 @@ being good looking and highly configurable.
 %files -f %{name}.lang
 %doc CHANGELOG README
 %{_bindir}/%{name}
-%{_datadir}/applications/%{name}.desktop
+%{_datadir}/applications/org.photoqt.PhotoQt.desktop
+%{_datadir}/applications/org.photoqt.PhotoQt.standalone.desktop
 %{_iconsdir}/hicolor/*/apps/%{name}.png
-%{_datadir}/appdata/%{name}.appdata.xml
+%{_datadir}/appdata/org.photoqt.PhotoQt.appdata.xml
 #---------------------------------------------------
 
 %prep
@@ -53,7 +56,7 @@ being good looking and highly configurable.
 sed -i 's|Debug|Release|' CMakeLists.txt
 
 %build
-%cmake_qt5 -DFREEIMAGE=OFF
+%cmake_qt5 -DFREEIMAGE=OFF -DCHROMECAST=OFF
 %make_build
 
 %install
