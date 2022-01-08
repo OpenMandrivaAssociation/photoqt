@@ -55,7 +55,7 @@ being good looking and highly configurable.
 sed -i 's|Debug|Release|' CMakeLists.txt
 
 %build
-%cmake_qt5 -DFREEIMAGE=OFF
+%cmake_qt5 -DFREEIMAGE=OFF -DCHROMECAST=OFF
 %make_build
 
 %install
