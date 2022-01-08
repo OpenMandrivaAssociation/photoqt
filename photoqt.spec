@@ -45,9 +45,10 @@ being good looking and highly configurable.
 %files -f %{name}.lang
 %doc CHANGELOG README
 %{_bindir}/%{name}
-%{_datadir}/applications/%{name}.desktop
+%{_datadir}/applications/org.photoqt.PhotoQt.desktop
+%{_datadir}/applications/org.photoqt.PhotoQt.standalone.desktop
 %{_iconsdir}/hicolor/*/apps/%{name}.png
-%{_datadir}/appdata/%{name}.appdata.xml
+%{_datadir}/appdata/org.photoqt.PhotoQt.appdata.xml
 #---------------------------------------------------
 
 %prep
