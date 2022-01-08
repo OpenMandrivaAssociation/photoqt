@@ -27,6 +27,7 @@ BuildRequires:  pkgconfig(pugixml)
 BuildRequires:	pkgconfig(IL)
 BuildRequires:	pkgconfig(libarchive)
 BuildRequires:  pkgconfig(python)
+BuildRequires:  python3dist(pip)
 #BuildRequires:	freeimage-devel
 #BuildRequires:  freeimage3
 BuildRequires:	qt5-linguist-tools
