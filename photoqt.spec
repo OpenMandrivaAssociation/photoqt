@@ -26,6 +26,7 @@ BuildRequires:	pkgconfig(poppler-qt5)
 BuildRequires:  pkgconfig(pugixml)
 BuildRequires:	pkgconfig(IL)
 BuildRequires:	pkgconfig(libarchive)
+BuildRequires:  pkgconfig(python)
 #BuildRequires:	freeimage-devel
 #BuildRequires:  freeimage3
 BuildRequires:	qt5-linguist-tools
