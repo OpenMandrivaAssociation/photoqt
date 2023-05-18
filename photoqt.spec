@@ -1,14 +1,16 @@
 Name:		photoqt
 Version:	3.1
-Release:	2
+Release:	1
 Summary:	Image viewer
 License:	GPLv3
 Group:		Graphics
 URL:		http://photoqt.org/
 Source0:	http://photoqt.org/pkgs/%{name}-%{version}.tar.gz
+Patch0:		photoqt-3.1-exiv2-0.28.patch
 
 BuildRequires:	desktop-file-utils
 BuildRequires:	qmake5
+BuildRequires:	ninja
 BuildRequires:	cmake(ECM)
 BuildRequires:	pkgconfig(Qt5Concurrent)
 BuildRequires:	pkgconfig(Qt5DBus)
@@ -55,13 +57,13 @@ being good looking and highly configurable.
 %prep
 %autosetup -p1
 sed -i 's|Debug|Release|' CMakeLists.txt
+%cmake_qt5 -DFREEIMAGE=OFF -DCHROMECAST=OFF -G Ninja
 
 %build
-%cmake_qt5 -DFREEIMAGE=OFF -DCHROMECAST=OFF
-%make_build
+%ninja_build -C build
 
 %install
-%make_install -C build
+%ninja_install -C build
 
 mkdir -p %{buildroot}%{_datadir}/%{name}/lang
 cp -r build/*.qm %{buildroot}%{_datadir}/%{name}/lang/
