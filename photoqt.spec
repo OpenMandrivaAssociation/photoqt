@@ -47,8 +47,9 @@ BuildRequires:	python3dist(pip)
 #BuildRequires:  freeimage3
 BuildRequires:	desktop-file-utils
 BuildRequires:	pkgconfig(phonon4qt5)
+BuildRequires:  pkgconfig(mpv)
 
-Requires:	qt5-database-plugin-sqlite
+#Requires:	qt5-database-plugin-sqlite
 Requires:	graphicsmagick
 
 %description
