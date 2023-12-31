@@ -1,31 +1,44 @@
 Name:		photoqt
-Version:	3.1
+Version:	4.1
 Release:	1
 Summary:	Image viewer
 License:	GPLv3
 Group:		Graphics
 URL:		http://photoqt.org/
 Source0:	http://photoqt.org/pkgs/%{name}-%{version}.tar.gz
-Patch0:		photoqt-3.1-exiv2-0.28.patch
 
 BuildRequires:	desktop-file-utils
-BuildRequires:	qmake5
+BuildRequires:	cmake(Qt6)
+BuildRequires:	qmake-qt6
 BuildRequires:	ninja
 BuildRequires:	cmake(ECM)
-BuildRequires:	pkgconfig(Qt5Concurrent)
-BuildRequires:	pkgconfig(Qt5DBus)
-BuildRequires:	pkgconfig(Qt5Quick)
-BuildRequires:	pkgconfig(Qt5QuickControls2)
-BuildRequires:	pkgconfig(Qt5Svg)
-BuildRequires:	pkgconfig(Qt5Core)
-BuildRequires:	pkgconfig(Qt5Multimedia)
-BuildRequires:	pkgconfig(Qt5Sql)
-BuildRequires:	pkgconfig(Qt5Xml)
-BuildRequires:	pkgconfig(Qt5PrintSupport)
+BuildRequires:  cmake(Qt6Concurrent)
+BuildRequires:  cmake(Qt6Core)
+BuildRequires:  cmake(Qt6Gui)
+BuildRequires:	cmake(Qt6QICNSPlugin)
+BuildRequires:  cmake(Qt6LinguistTools)
+BuildRequires:  cmake(Qt6Multimedia)
+BuildRequires:  cmake(Qt6PrintSupport)
+BuildRequires:  cmake(Qt6Quick)
+BuildRequires:  cmake(Qt6Qml)
+BuildRequires:  cmake(Qt6QmlCore)
+BuildRequires:  cmake(Qt6Sql)
+BuildRequires:  qt6-qtbase-sql-firebird
+BuildRequires:  qt6-qtbase-sql-mariadb
+BuildRequires:  qt6-qtbase-sql-odbc
+BuildRequires:  qt6-qtbase-sql-postgresql
+BuildRequires:  qt6-qtmultimedia-gstreamer
+BuildRequires:  cmake(Qt6Svg)
+BuildRequires:  cmake(Qt6Test)
+BuildRequires:  cmake(Qt6Widgets)
+BuildRequires:  cmake(Qt6Network)
+BuildRequires:  qml(QtNetwork)
+BuildRequires:	qt6-qtbase-theme-gtk3
+BuildRequires:  pkgconfig(poppler-qt6)
 BuildRequires:	pkgconfig(GraphicsMagick)
+BuildRequires:  pkgconfig(ImageMagick)
 BuildRequires:	pkgconfig(exiv2)
 BuildRequires:	pkgconfig(libraw)
-BuildRequires:	pkgconfig(poppler-qt5)
 BuildRequires:	pkgconfig(pugixml)
 BuildRequires:	pkgconfig(IL)
 BuildRequires:	pkgconfig(libarchive)
@@ -33,12 +46,11 @@ BuildRequires:	pkgconfig(python)
 BuildRequires:	python3dist(pip)
 #BuildRequires:	freeimage-devel
 #BuildRequires:  freeimage3
-BuildRequires:	qt5-linguist-tools
 BuildRequires:	desktop-file-utils
-BuildRequires:	pkgconfig(phonon4qt5)
-BuildRequires:	qt5-qtimageformats-devel
+BuildRequires:	pkgconfig(phonon4qt6)
+BuildRequires:  pkgconfig(mpv)
 
-Requires:	qt5-database-plugin-sqlite
+Requires:	qt6-qtbase-sql-sqlite
 Requires:	graphicsmagick
 
 %description
@@ -57,7 +69,7 @@ being good looking and highly configurable.
 %prep
 %autosetup -p1
 sed -i 's|Debug|Release|' CMakeLists.txt
-%cmake_qt5 -DFREEIMAGE=OFF -DCHROMECAST=OFF -G Ninja
+%cmake -DFREEIMAGE=OFF -DCHROMECAST=OFF -G Ninja
 
 %build
 %ninja_build -C build
