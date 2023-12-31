@@ -46,7 +46,7 @@ BuildRequires:	python3dist(pip)
 #BuildRequires:	freeimage-devel
 #BuildRequires:  freeimage3
 BuildRequires:	desktop-file-utils
-BuildRequires:	pkgconfig(phonon4qt5)
+BuildRequires:	pkgconfig(phonon4qt6)
 BuildRequires:  pkgconfig(mpv)
 
 Requires:	qt6-qtbase-sql-sqlite
