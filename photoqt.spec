@@ -49,7 +49,7 @@ BuildRequires:	desktop-file-utils
 BuildRequires:	pkgconfig(phonon4qt5)
 BuildRequires:  pkgconfig(mpv)
 
-#Requires:	qt5-database-plugin-sqlite
+Requires:	qt6-qtbase-sql-sqlite
 Requires:	graphicsmagick
 
 %description
