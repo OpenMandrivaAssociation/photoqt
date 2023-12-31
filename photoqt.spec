@@ -21,6 +21,7 @@ BuildRequires:  cmake(Qt6Multimedia)
 BuildRequires:  cmake(Qt6PrintSupport)
 BuildRequires:  cmake(Qt6Quick)
 BuildRequires:  cmake(Qt6Qml)
+BuildRequires:  cmake(Qt6QmlCore)
 BuildRequires:  cmake(Qt6Sql)
 BuildRequires:  qt6-qtbase-sql-firebird
 BuildRequires:  qt6-qtbase-sql-mariadb
@@ -35,7 +36,7 @@ BuildRequires:  qml(QtNetwork)
 BuildRequires:	qt6-qtbase-theme-gtk3
 BuildRequires:  pkgconfig(poppler-qt6)
 BuildRequires:	pkgconfig(GraphicsMagick)
-BuildRequires:  imagemagick
+BuildRequires:  pkgconfig(ImageMagick)
 BuildRequires:	pkgconfig(exiv2)
 BuildRequires:	pkgconfig(libraw)
 BuildRequires:	pkgconfig(pugixml)
