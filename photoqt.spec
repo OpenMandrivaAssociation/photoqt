@@ -1,11 +1,11 @@
 Name:		photoqt
-Version:	4.2
+Version:	4.4
 Release:	1
 Summary:	Image viewer
 License:	GPLv3
 Group:		Graphics
-URL:		http://photoqt.org/
-Source0:	http://photoqt.org/pkgs/%{name}-%{version}.tar.gz
+URL:		https://photoqt.org/
+Source0:	https://photoqt.org/pkgs/%{name}-%{version}.tar.gz
 
 BuildRequires:	desktop-file-utils
 BuildRequires:	cmake(Qt6)
