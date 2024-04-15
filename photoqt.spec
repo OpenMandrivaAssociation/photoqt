@@ -7,6 +7,7 @@ Group:		Graphics
 URL:		https://photoqt.org/
 Source0:	https://photoqt.org/pkgs/%{name}-%{version}.tar.gz
 
+BuildRequires:  gettext
 BuildRequires:	desktop-file-utils
 BuildRequires:	cmake(Qt6)
 BuildRequires:	qmake-qt6
@@ -49,6 +50,7 @@ BuildRequires:	python3dist(pip)
 BuildRequires:	desktop-file-utils
 BuildRequires:	pkgconfig(phonon4qt6)
 BuildRequires:  pkgconfig(mpv)
+BuildRequires:  pkgconfig(zxing)
 
 Requires:	qt6-qtbase-sql-sqlite
 Requires:	graphicsmagick
