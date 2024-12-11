@@ -1,6 +1,6 @@
 Name:		photoqt
-Version:	4.5
-Release:	2
+Version:	4.7
+Release:	1
 Summary:	Image viewer
 License:	GPLv3
 Group:		Graphics
